@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.css">
 <link crossorigin="anonymous" media="all" rel="stylesheet" href="assets/light-327c05026583e0deae6cdb4a583e3b84.css" />
 <link crossorigin="anonymous" media="all" rel="stylesheet" href="assets/dark-c5cc774753662a380e004d83b021d86e.css" />
 
@@ -11,7 +12,146 @@
 
 <style>
 
+/*team*/
+.col-lg-3.col-md-6.col-sm-6.padding-15 {
+    padding: 0 15px;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.our-team-section {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.our-team-section:before {
+    position: absolute;
+    top: -0;
+    left: 0;
+    content: " ";
+    background: url(img/service-section-bottom.png);
+    background-size: 100% 100px;
+    width: 100%;
+    height: 100px;
+    float: left;
+    z-index: 99;
+}
+.our-team {
+    padding: 30px 0 40px;
+    background: #f9f9f9;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 5px solid #00325a;
+}
+.our-team:hover{
+    border-bottom: 5px solid #2f2f2f;
+}
 
+.our-team .pic{
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
+}
+.our-team .pic:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #00325a;
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 1;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+}
+.our-team:hover .pic:before{
+ height: 100%;
+    background: #2f2f2f; 
+ }
+.our-team .pic:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #ffffff00;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 0.3s linear 0s;
+}
+.our-team:hover .pic:after{
+    background: #00325a;
+}
+.our-team .pic img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+    box-shadow: 0 0 0 14px #f7f5ec;
+    transform: scale(0.7);
+    position: relative;
+    z-index: 2;
+}
+.our-team:hover .pic img{
+    box-shadow: 0 0 0 14px #f7f5ec;
+    transform: scale(0.7);
+}
+.our-team .team-content{ margin-bottom: 30px; }
+.our-team .title{
+    font-size: 22px;
+    font-weight: 700;
+    color: #4e5052;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+.our-team .post{
+    display: block;
+    font-size: 15px;
+    color: #4e5052;
+    text-transform:capitalize;
+}
+.our-team .social{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #2f2f2f;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+.our-team:hover .social{ bottom: 0; }
+.our-team .social li{ display: inline-block; }
+.our-team .social li a{
+    display: block;
+    padding: 10px;
+    font-size: 17px;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+}
+.our-team .social li a:hover{
+    color: #2f2f2f;
+    background: #f7f5ec;
+}
+@media only screen and (max-width: 990px){
+    .our-team{ margin-bottom: 30px; }
+}
+
+/*team*/
 
 .home-hero-container {
 min-height: 750px;
@@ -162,9 +302,17 @@ max-width: 80%!important;
 	}
 }
 
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
 </style>
 
-<link crossorigin="anonymous" media="all" rel="stylesheet" href="assets/dithereum-4a950b722035c96861c25c2d643184e8.css" />
+<link crossorigin="anonymous" media="all" rel="stylesheet" href="assets/darthion-4a950b722035c96861c25c2d643184e8.css" />
 <link crossorigin="anonymous" media="all" rel="stylesheet" href="assets/site-95582afbc21b7e3a2eaeddeb803f7606.css" />
 <link crossorigin="anonymous" media="all" rel="stylesheet" href="assets/home-eb5baa36b2f8e14e68ee71c46f608925.css" />
 
@@ -187,14 +335,14 @@ $("#footer").load("footer.html");
 
 <meta name="viewport" content="width=device-width">
 
-<title>Dithereum: Where the world builds Dapps · Dithereum</title>
+<title>Darthion: Where the world builds Dapps · Darthion</title>
 
-<link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Dithereum">
-<link rel="fluid-icon" href="fluidicon.png" title="Dithereum">
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Darthion">
+<link rel="fluid-icon" href="fluidicon.png" title="darthion">
 
-<meta name="page-subject" content="Dithereum">
+<meta name="page-subject" content="darthion">
 
-<meta name="Dithereum-keyboard-shortcuts" content="dashboards" data-pjax-transient="true" />
+<meta name="darthion-keyboard-shortcuts" content="dashboards" data-pjax-transient="true" />
 
 
 
@@ -207,11 +355,11 @@ $("#footer").load("footer.html");
 
 <meta name="features-datafile" content="{&quot;features&quot;:[{&quot;name&quot;:&quot;home_page_globe&quot;,&quot;enabled&quot;:true,&quot;percentageOfActors&quot;:0,&quot;actors&quot;:[]}]}" />
 
-<meta name="hostname" content="Dithereum.com">
+<meta name="hostname" content="Darthion.com">
 <meta name="user-login" content="">
 
 
-<meta name="expected-hostname" content="Dithereum.com">
+<meta name="expected-hostname" content="Darthion.com">
 
 
 <meta name="enabled-features" content="BRANCH_PROTECTION_RULE_WEBHOOK,MARKETPLACE_PENDING_INSTALLATIONS,FILE_UPLOAD_CURSOR_POSITION">
@@ -232,10 +380,10 @@ $("#footer").load("footer.html");
 <link rel="preload" href="static/fonts/alliance/Alliance-No-1-ExtraBold.woff2" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="static/fonts/alliance/Alliance-No-1-Regular.woff2" as="font" type="font/woff" crossorigin>
 
-<meta name="browser-optimizely-client-errors-url" content="https://api.Dithereum.com/_private/browser/optimizely_client/errors">
+<meta name="browser-optimizely-client-errors-url" content="https://api.Darthion.com/_private/browser/optimizely_client/errors">
 
 <link rel="mask-icon" href="pinned-octocat.svg" color="#000000">
-<link rel="alternate icon" class="js-site-favicon" type="image/png" href="assets/images/DithereumIconFavicon.png">
+<link rel="alternate icon" class="js-site-favicon" type="image/png" href="assets/images/favicon.png">
 
 
 <meta name="theme-color" content="#1e2327">
@@ -269,8 +417,8 @@ $("#footer").load("footer.html");
 </svg>
 <div class="d-flex flex-auto flex-column flex-md-row">
 <div class="flex-auto min-width-0 mr-2" style="padding-top:1px">
-<span>Dithereum no longer supports this web browser.</span>
-<a href="https://docs.Dithereum.com/articles/supported-browsers">
+<span>Darthion no longer supports this web browser.</span>
+<a href="https://docs.darthion.com/articles/supported-browsers">
 Learn more about the browsers we support.
 </a>
 </div>
@@ -330,14 +478,14 @@ data-issue-and-pr-hovercards-enabled
 
 <div class="d-flex gutter gutter-spacious flex-column flex-lg-row flex-items-center height-full px-0 px-lg-3">
 <div class="ml-md-n3 mr-md-3 col-12 col-lg-6 text-center text-md-left">
-	<h1 class="h1-mktg color-text-white mb-3 position-relative z-2"> Blockchain Solution for the Enterprises </h1>
-	<p class="f2-mktg text-normal text-gray-light-mktg mr-lg-n4 mb-4 position-relative z-2"> Dithereum provides a Blockchain-as-a-Service (BaaS) solution for the enterprises to transform their platforms into scalable, immutabile, and interoperable infrastructures to take their businesses to the next level. </p>
+	<h1 class="h1-mktg color-text-white mb-3 position-relative z-2"> Darthion Team </h1>
+	<p class="f2-mktg text-normal text-gray-light-mktg mr-lg-n4 mb-4 position-relative z-2"> Darthion provides a Blockchain-as-a-Service (BaaS) solution for the enterprises to transform their platforms into scalable, immutabile, and interoperable infrastructures to take their businesses to the next level. </p>
 
 	
 <form class="mx-auto mx-md-0 col-5-max js-signup-form position-relative z-2" autocomplete="off" action="/signup" accept-charset="UTF-8" method="get">              
 <div class="d-flex flex-column flex-sm-row flex-items-center">
 		
-		<a href="mailto: contact@dithereum.org" 
+		<a href="mailto: contact@darthion.org" 
 		class="btn-mktg btn-primary-mktg width-full width-sm-auto">
 		Contact us
 	</a>
@@ -351,7 +499,7 @@ data-issue-and-pr-hovercards-enabled
 <div class="col-12 col-lg-6 text-center position-relative" style="
 ">
 <div class="mx-auto width-full mt-lg-2 home-globe position-relative height-full js-webgl-globe">
-		<img src="assets/images/enterprise-cover-image.png" alt="enterprises" style="width: 100%;" alt="bass enterprise cover">
+		<img src="assets/images/team/team.png" alt="enterprises" style="width: 70%;" alt="bass team cover">
 	
 </div>
 
@@ -371,136 +519,134 @@ data-issue-and-pr-hovercards-enabled
 
 </div>
 
-<div class="overflow-hidden">
-<div class="mx-auto container-xl p-responsive py-8 py-md-9">
-<div class="d-flex gutter gutter-spacious js-build-in-trigger" data-build-margin-bottom="20">
-<div class="col-10-max mx-auto">
-<div class="js-build-in-item build-in-scale-fade color-bg-primary rounded-2 box-shadow-card-border-mktg overflow-hidden">
 
-
-<div class="flash-banner-new">
-	<img src="assets/images/baas.png" style="width: 100%;" alt="bass">
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-12 col-md-8 position-absolute text-right position-relative height-full right-0">
-<picture>
-<source srcset="assets/images/baas.png" type="image/webp">
-<img src="assets/images/baas.png" class="width-full height-auto position-absolute right-0 bottom-0" alt="Futuristic city scape" loading="lazy" decoding="async" width="1376" height="436">
-</picture>
-</div>
-</div>
 </div>
 
 <div class="position-relative pt-5 mt-5">
 <div class="position-absolute left-0 width-full height-full js-build-in-trigger" data-build-non-decorative="true" data-build-margin-bottom="100" data-build-threshold="0" style="top: -4rem;">
 <div class="mb-4 top-0 home-nav-outer js-build-in-item width-full z-3">
-<div class="home-nav width-full js-toggler-container">
-<div class="home-nav-bg position-fixed top-0 left-0 width-full height-full z-n1 color-bg-canvas-inverse js-toggler-target-off" style="opacity: 0.8"></div>
-<div class="px-md-4 py-2 color-bg-primary">
-<div class="home-nav-container mx-auto col-10-max d-flex flex-justify-between">
-<button type="button" class="home-nav-trigger text-left js-toggler-target d-inline-block d-md-none py-2 px-3" aria-label="Toggle page navigation">
-<svg class="octicon octicon-three-bars color-text-primary replaced color-text-primary" viewBox="0 0 16 16" height="24"><path clip-rule="evenodd" d="m1 2.75c0-.19891.07902-.38968.21967-.53033s.33142-.21967.53033-.21967h12.5c.1989 0 .3897.07902.5303.21967.1407.14065.2197.33142.2197.53033s-.079.38968-.2197.53033c-.1406.14065-.3314.21967-.5303.21967h-12.5c-.19891 0-.38968-.07902-.53033-.21967s-.21967-.33142-.21967-.53033zm0 5c0-.19891.07902-.38968.21967-.53033s.33142-.21967.53033-.21967h12.5c.1989 0 .3897.07902.5303.21967.1407.14065.2197.33142.2197.53033s-.079.38968-.2197.53033c-.1406.14065-.3314.21967-.5303.21967h-12.5c-.19891 0-.38968-.07902-.53033-.21967s-.21967-.33142-.21967-.53033zm.75 4.25c-.19891 0-.38968.079-.53033.2197-.14065.1406-.21967.3314-.21967.5303s.07902.3897.21967.5303c.14065.1407.33142.2197.53033.2197h12.5c.1989 0 .3897-.079.5303-.2197.1407-.1406.2197-.3314.2197-.5303s-.079-.3897-.2197-.5303c-.1406-.1407-.3314-.2197-.5303-.2197z" fill-rule="evenodd"></path></svg>
 
-<svg class="octicon octicon-x color-text-primary" height="24" viewBox="0 0 24 24" width="16"><path clip-rule="evenodd" d="m6.21967 6.21967c.29289-.29289.76777-.29289 1.06066 0l4.71967 4.71963 4.7197-4.71963c.2929-.29289.7677-.29289 1.0606 0s.2929.76777 0 1.06066l-4.7196 4.71967 4.7196 4.7197c.2929.2929.2929.7677 0 1.0606s-.7677.2929-1.0606 0l-4.7197-4.7196-4.71967 4.7196c-.29289.2929-.76777.2929-1.06066 0s-.29289-.7677 0-1.0606l4.71963-4.7197-4.71963-4.71967c-.29289-.29289-.29289-.76777 0-1.06066z" fill-rule="evenodd"></path></svg>
-
-</button>
-
-<div class="home-nav-links-container d-flex flex-auto flex-md-items-center">
-
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 
 
 <div class="overflow-hidden">
-<meta property="page-title" content="Dithereum: Where the world builds software">
-<meta property="page-description" content="Dithereum is where over 65 million developers shape the future of software, together. Contribute to the open source community, manage your Dithereum repositories, review code like a pro, track bugs and features, power your CI/CD and DevOps workflows, and secure code before you commit it.">
+<meta property="page-title" content="Darthion: Where the world builds software">
+<meta property="page-description" content="Darthion is where over 65 million developers shape the future of software, together. Contribute to the open source community, manage your Darthion repositories, review code like a pro, track bugs and features, power your CI/CD and DevOps workflows, and secure code before you commit it.">
 
-<div class="position-relative z-2 mx-auto box-shadow-default-mktg wide-block js-section" id="home-code">
+<div class="position-relative z-2 mx-auto box-shadow-default-mktg wide-block js-section" id="home-code" style="    padding: 0 0 0 !important;">
 <div class="container-xl p-responsive">
 <div class="d-flex flex-column gutter gutter-spacious">
-<div class="col-12 col-sm-10 offset-sm-1">
-<div class="col-12-max">
-<h2 class="h2-mktg color-text-white mb-6 mb-md-8 text-gradient-mint-blue-dark" style="font-size:59px">Leverage blockchain technology to enhance your business </h2>
-</div>
-</div>
+	    <section class="our-team-section">
+        <div class="container12">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 padding-15">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="assets/images/team/jig.jpeg">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Jignesh Padsala</h3>
+                            <span class="post">CEO | Business Ninja</span>
+                        </div>
+                        <ul class="social">
+                            <li>
+                                <a href="#"  target="_blank"class="fa fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-google-plus"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-linkedin"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-<div class="col-11 col-sm-10 offset-1">
-<ul class="home-git-log-dark d-flex gutter gutter-spacious flex-column list-style-none pb-5">
-<li class="col-12 col-md-12 col-lg-12 mt-n3 pb-4">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" height="28" viewBox="0 0 28 20" width="28" aria-hidden="true" class="home-git-icon home-git-item float-left mr-n6 position-relative z-1"><circle cx="14" cy="10" fill="#fff" r="5" stroke="#d0d6df" stroke-width="2"></circle></svg>
+                <div class="col-lg-3 col-md-6 col-sm-6 padding-15">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="assets/images/team/yog.jpg">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Yogesh Padsala</h3>
+                            <span class="post">CTO | Blockchain Evangelist</span>
+                        </div>
+                        <ul class="social">
+                            <li>
+                                <a href="#" class="fa fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-google-plus"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-linkedin"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 padding-15">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="assets/images/team/vaisu.jpeg">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Vaishali Patel</h3>
+                            <span class="post">Head | Dapp Development</span>
+                        </div>
+                        <ul class="social">
+                            <li>
+                                <a href="#" class="fa fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-google-plus"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-linkedin"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-<h3 class="f2-mktg text-gray-light-mktg text-semibold mb-3"> <span class="color-text-white"> 
-Whether you want to launch your own blockchain platform like Dithereum or you are already running a small or large business, you can use the Dithereum platform to develop your infrastructure and take your business to the next level.
-</span></h3>
-<a class="link-bump-mktg mr-3 text-semibold color-text-primary no-underline d-inline-block color-text-white f4-mktg pt-2 pb-3 link-bump-underlined-mktg" href="/" target="_blank" data-hydro-click="{&quot;event_type&quot;:&quot;analytics.event&quot;,&quot;payload&quot;:{&quot;category&quot;:&quot;Sign up&quot;,&quot;action&quot;:&quot;click to sign up for account&quot;,&quot;label&quot;:&quot;ref_page:/;ref_cta:Sign up for Dithereum;ref_loc:code launchpad&quot;,&quot;originating_url&quot;:&quot;&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="27e89dfe3a82ce0ed8c8a0e59e285b098a21d46dcff1b7175af9056efd5e82e8">
-<span class="position-relative link-bump-inner-mktg">Read the whitepaper <span class=""><svg xmlns="http://www.w3.org/2000/svg" class="octicon octicon-chevrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill="currentColor" d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"></path>
-<path class="octicon-chevrow-stem" stroke="currentColor" d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round"></path></svg>
-</span></span>
-</a>
+                <div class="col-lg-3 col-md-6 col-sm-6 padding-15">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="assets/images/team/chan.jpg">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Chandan Kumar</h3>
+                            <span class="post">Head | Smart Contract</span>
+                        </div>
+                        <ul class="social">
+                            <li>
+                                <a href="#" class="fa fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-google-plus"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-linkedin"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-</li>
+    </section>
 
-
-
-
-</ul>
-</div>
-
-
-
-
-<div class="col-11 col-sm-10 offset-1">
-<ul class="home-git-log-dark d-flex gutter gutter-spacious flex-column list-style-none pt-5 pb-8 pb-md-9">
-
-
-
-<li class="col-12 col-md-9 col-lg-12">
-<div class="d-flex flex-column flex-lg-row flex-lg-row-reverse flex-items-center gutter gutter-spacious my-4">
-<div class="col-12 col-lg-6 py-5 js-build-in build-in-slideX-left">
-<h2 class="h3-mktg color-text-white mb-3 text-gradient-mint-blue-dark"> Key Benefits </h2>
-<h3 class="f2-mktg text-gray-light-mktg lh-condensed text-semibold mb-3">
-	<br>
-	<span class="color-text-white"> &bull; Security via DPoS Consensus</span><br><br>
-	<span class="color-text-white"> &bull; Croos-chain Assets Bridge</span><br><br>
-	<span class="color-text-white"> &bull; Fully EVM Compatible</span><br><br>
-	<span class="color-text-white"> &bull; Highly Scalable Infrastructure</span>
-	
-</h3>
-</div>
-
-<div class="col-12 col-lg-6" aria-hidden="true">
-<div class="position-relative">
-	<div class="rounded-2 home-packages-terminal f5-mktg p-4 text-mono">
-		
-		<img src="assets/images/blockchain-enterprise.jpg" alt="blockchain-enterprise" style="width: 100%;">
-	</div>
-
-	<img src="assets/images/repo-terminal-glow.svg" class="position-absolute z-n1" style="width: 150%; margin: 0 -25%; top: 50%; transform: translateY(-50%);" alt="Light glowing behind the editor" loading="lazy">
-</div>
-</div>
-</div>
-</li>
-
-<br>
-<div class="d-flex flex-column flex-sm-row22 flex-items-center">
-		
-		<a href="mailto: contact@dithereum.org" 
-		class="btn-mktg btn-primary-mktg width-full width-sm-auto">
-		Contact us
-	</a>
-</div>
-
-
-</ul>
-</div>
 </div>
 </div>
 </div>
