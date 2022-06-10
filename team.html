@@ -12,7 +12,32 @@
 
 <style>
 
+@font-face {
+  font-family: Futura_Heavy_BT;
+  src: url(assets/fonts/FuturaHeavyBT.ttf);
+}
+@font-face {
+  font-family: Proxima_Nova_Font;
+  src: url(assets/fonts/ProximaNovaFont.otf);
+}
+
+.Proxima_Nova_Font{
+     font-family: Proxima_Nova_Font;
+}
+.f0-mktg, .f1-mktg, .f2-mktg, .f3-mktg, .f4-mktg, .f5-mktg, .f6-mktg{
+    font-family: Proxima_Nova_Font!important;
+}
+/*  .Futura_Heavy_BT{
+    font-family: Futura_Heavy_BT;
+}*/
+.h0-mktg, .h1-mktg, .h2-mktg, .h3-mktg, .h4-mktg, .h5-mktg, .h6-mktg {
+    font-family: Futura_Heavy_BT!important;
+}
+
 /*team*/
+.darthion-logo {
+    width: 160px;
+}
 .col-lg-3.col-md-6.col-sm-6.padding-15 {
     padding: 0 15px;
 }
@@ -47,7 +72,7 @@
     text-align: center;
     overflow: hidden;
     position: relative;
-    border-bottom: 5px solid #00325a;
+    border-bottom: 5px solid #4a24ff;
 }
 .our-team:hover{
     border-bottom: 5px solid #2f2f2f;
@@ -66,7 +91,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: #00325a;
+    background: #4a24ff;
     position: absolute;
     bottom: 135%;
     right: 0;
@@ -92,7 +117,7 @@
     transition: all 0.3s linear 0s;
 }
 .our-team:hover .pic:after{
-    background: #00325a;
+    background: #4a24ff;
 }
 .our-team .pic img {
     width: 100%;
@@ -499,7 +524,7 @@ data-issue-and-pr-hovercards-enabled
 <div class="col-12 col-lg-6 text-center position-relative" style="
 ">
 <div class="mx-auto width-full mt-lg-2 home-globe position-relative height-full js-webgl-globe">
-		<img src="assets/images/team/team.png" alt="enterprises" style="width: 70%;" alt="bass team cover">
+		<img src="assets/images/team/team.png" alt="enterprises" style="width: 100%;" alt="bass team cover">
 	
 </div>
 
@@ -508,7 +533,7 @@ data-issue-and-pr-hovercards-enabled
 </div>
 </div>
 
-<img src="assets/images/hero-glow.svg" alt="Glowing universe" class="position-absolute home-hero-glow events-none z-1">
+<img src="assets/images/hero-glow.png" alt="Glowing universe" class="position-absolute home-hero-glow events-none z-1">
 <video loop muted playsinline preload="none" class="js-globe-aurora position-absolute top-0 left-0 right-0 bottom-0" style="margin: auto; z-index: -1; min-width: 100%; min-height: 100%;" hidden>
 <source type="video/mp4; codecs=avc1.4D401E,mp4a.40.2" src="assets/images/aurora.h264.mp4">
 </video>
@@ -648,7 +673,7 @@ data-issue-and-pr-hovercards-enabled
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" style="display: none;">
                 <div class="col-lg-3 col-md-6 col-sm-6 padding-15">
                     <div class="our-team">
                         <div class="pic">
