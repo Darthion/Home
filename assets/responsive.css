@@ -1,0 +1,14 @@
+@media (min-width: 1012px) and (max-width: 1200px){
+	.h1-mktg {
+	    font-size: 46px !important;
+	    line-height: 76px !important;
+	}
+	.mx-3 {
+	    margin-right: 0 !important;
+	    margin-left: 0px !important;
+	}
+
+	.HeaderMenu-link img{
+		height: 16px !important;
+	}
+}
